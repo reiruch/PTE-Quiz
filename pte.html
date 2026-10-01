@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards Teknik Elektro Terlengkap</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e9ecef;
+        padding: 20px;
+        margin: 0;
+    }
+    .header-title {
+        text-align: center;
+        color: #343a40;
+        margin-bottom: 30px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 1300px;
+        margin: auto;
+    }
+    .card {
+        background-color: transparent;
+        height: 340px;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+    .inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: transform 0.7s;
+        transform-style: preserve-3d;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .card:hover .inner {
+        transform: rotateY(180deg);
+    }
+    .front, .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 12px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .front {
+        background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+        color: white;
+        text-align: center;
+        align-items: center;
+    }
+    .front h2 {
+        margin: 0 0 10px 0;
+        font-size: 1.6rem;
+    }
+    .front p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.85;
+    }
+    .back {
+        background: white;
+        color: #212529;
+        transform: rotateY(180deg);
+        overflow-y: auto;
+        border: 2px solid #4e4376;
+    }
+    .back ul {
+        padding-left: 20px;
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    .back li {
+        margin-bottom: 8px;
+    }
+    /* Style khusus untuk rumus agar mudah dibaca */
+    .rumus {
+        background-color: #f8f9fa;
+        color: #d63384;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        border: 1px solid #dee2e6;
+        display: inline-block;
+        margin-top: 4px;
+    }
+    .cite {
+        font-size: 0.75rem;
+        color: #6c757d;
+    }
+    b { color: #d63384; }
+</style>
+</head>
+<body>
+
+<h1 class="header-title">Materi Kuis Teknik Elektro</h1>
+
+<div class="grid">
+
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Ruang Lingkup</h2>
+                <p>Cabang Teknik Elektro</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Sistem Tenaga:</b> Pembangkitan, transmisi, & distribusi energi efisien <span class="cite"></span>.</li>
+                    <li><b>Elektronika:</b> Sirkuit dengan komponen aktif (dioda, transistor) <span class="cite"></span>.</li>
+                    <li><b>Kendali/Otomasi:</b> Mengatur perilaku sistem lain (robotika) <span class="cite"></span>.</li>
+                    <li><b>Telekomunikasi:</b> Transmisi sinyal kabel, satelit, nirkabel <span class="cite"></span>.</li>
+                    <li><b>Komputer & Biomedis:</b> Arsitektur hardware/AI dan aplikasi alat medis <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Sejarah Listrik</h2>
+                <p>Tokoh Kelistrikan Awal</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Thales (600 SM):</b> Temukan listrik statis dari menggosok batu amber <span class="cite"></span>.</li>
+                    <li><b>W. Gilbert (1600):</b> Kenalkan istilah "electricus" <span class="cite"></span>.</li>
+                    <li><b>S. Gray (1729):</b> Identifikasi konduktor dan isolator <span class="cite"></span>.</li>
+                    <li><b>B. Franklin (1750):</b> Petir adalah listrik; pencetus muatan positif (+) & negatif (-) <span class="cite"></span>.</li>
+                    <li><b>A. Volta (1800):</b> Penemu Voltaic Pile (baterai pertama penyuplai arus DC stabil) <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Sejarah Elektromagnetik</h2>
+                <p>Tokoh Fisika Modern</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>G.S. Ohm (1827):</b> Rumuskan <span class="rumus">V = I &times; R</span> <span class="cite"></span>.</li>
+                    <li><b>Ampère (1820):</b> Hubungan matematis arus dan medan magnet <span class="cite"></span>.</li>
+                    <li><b>M. Faraday (1831):</b> Penemu induksi elektromagnetik <span class="cite"></span>.</li>
+                    <li><b>J.C. Maxwell (1873):</b> 4 Persamaan penyatu listrik-magnet; buktikan cahaya = gelombang elektromagnetik <span class="cite"></span>.</li>
+                    <li><b>J.J. Thomson (1897):</b> Penemu elektron <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Elektron</h2>
+                <p>Partikel Dasar Atom</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Sifat:</b> Partikel subatom elementer bermuatan negatif (-1) dengan massa sangat kecil (<span class="rumus">9.109 &times; 10<sup>-31</sup> kg</span>) <span class="cite"></span>.</li>
+                    <li><b>Orbital:</b> Berada mengorbit di luar inti atom (nukleus) <span class="cite"></span>.</li>
+                    <li><b>Spin:</b> Punya momentum sudut (spin) searah (+1/2) atau berlawanan (-1/2) medan magnet <span class="cite"></span>.</li>
+                    <li><b>Aliran:</b> Lepasnya "elektron terluar/bebas" memicu arus listrik <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Arus Listrik (I)</h2>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Definisi:</b> Aliran muatan listrik dalam konduktor di waktu tertentu <span class="cite"></span>.</li>
+                    <li><b>Rumus Dasar:</b> <span class="rumus">I = Q / t</span> (Ampere = Coulomb / Detik) <span class="cite"></span>.</li>
+                    <li><b>Arah Konvensional:</b> Mengalir dari potensial (+) ke (-) <span class="cite"></span>.</li>
+                    <li><b>Arah Elektron:</b> Aslinya elektron bergerak dari (-) ke (+) <span class="cite"></span>.</li>
+                    <li><b>Pengukuran:</b> Diukur pakai Ammeter yang dipasang <b>Seri</b> <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Tegangan Listrik (V)</h2>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Definisi:</b> Beda potensial / tekanan yang mendorong arus mengalir <span class="cite"></span>.</li>
+                    <li><b>Rumus Dasar:</b> <span class="rumus">V = W / Q</span> (Volt = Joule / Coulomb) <span class="cite"></span>.</li>
+                    <li><b>Analogi:</b> Seperti perbedaan ketinggian air di dua tangki <span class="cite"></span>.</li>
+                    <li><b>Pengukuran:</b> Diukur pakai Voltmeter yang dipasang <b>Paralel</b> <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Resistansi (R)</h2>
+                <p>Hambatan & Suhu</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Definisi:</b> Sifat menghambat arus dan mengubah energi listrik jadi panas <span class="cite"></span>.</li>
+                    <li><b>Rumus Kawat:</b> <span class="rumus">R = (&rho; &times; L) / A</span> (bergantung panjang, bahan, luas penampang) <span class="cite"></span>.</li>
+                    <li><b>Hukum Ohm:</b> <span class="rumus">V = I &times; R</span> <span class="cite"></span>.</li>
+                    <li><b>Faktor Suhu:</b> Temperatur naik, hambatan kawat umum ikut <b>naik</b> <span class="cite"></span>.</li>
+                    <li><b>Rumus Suhu:</b> <span class="rumus">R<sub>t</sub> = R<sub>0</sub>[1 + &alpha;&Delta;T]</span> <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Komponen Pasif Lainnya</h2>
+                <p>C dan L</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Kapasitansi (C):</b> Menyimpan energi dalam <b>medan listrik</b> <span class="cite"></span>.</li>
+                    <li><b>Rumus C (Farad):</b> <br><span class="rumus">C = (&epsilon; &times; A) / d</span> <span class="cite"></span>.</li>
+                    <li><b>Induktansi (L):</b> Menyimpan energi dalam <b>medan magnet</b> <span class="cite"></span>.</li>
+                    <li><b>Rumus L (Henry):</b> <br><span class="rumus">L = (N<sup>2</sup> &times; &mu; &times; A) / l</span> <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Baterai & Jenis Listrik</h2>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Baterai:</b> Konversi energi kimia (redoks) ke listrik <span class="cite"></span>.</li>
+                    <li><b>Komponen Baterai:</b> Anoda (-) lepas ion, Katoda (+) terima ion, Elektrolit, Separator <span class="cite"></span>.</li>
+                    <li><b>Listrik Statis:</b> Penumpukan muatan diam di permukaan (gesekan/petir) <span class="cite"></span>.</li>
+                    <li><b>Listrik Dinamis:</b> Aliran elektron; DC (searah dari baterai) & AC (bolak-balik dari PLN/alternator) <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Hukum Magnet 1</h2>
+                <p>Biot-Savart & Ampère</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Biot-Savart (1820):</b> Arus listrik mengalir hasilkan medan magnet <span class="cite"></span>.<br> <span class="rumus">dB = (&mu;<sub>0</sub> / 4&pi;) &times; (I dl / r<sup>2</sup>)</span> <span class="cite"></span>.</li>
+                    <li><b>Hukum Ampère:</b> Arus menimbulkan medan magnet melingkar (Aturan Tangan Kanan) <span class="cite"></span>.<br> <span class="rumus">&oint; B &middot; dl = &mu;<sub>0</sub> I<sub>total</sub></span> <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Hukum Magnet 2</h2>
+                <p>Faraday & Lenz</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Hukum Faraday:</b> Perubahan fluks medan magnet picu Gaya Gerak Listrik (GGL) induksi <span class="cite"></span>.</li>
+                    <li><b>Rumus Faraday:</b> <br><span class="rumus">&epsilon; = -N (d&Phi;<sub>B</sub> / dt)</span> <span class="cite"></span>.<br> Dasar kerja generator dan trafo <span class="cite"></span>.</li>
+                    <li><b>Hukum Lenz:</b> Tanda (-) di Faraday berarti arah arus induksi <b>selalu menentang</b> perubahan magnet sumbernya <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>4 Persamaan Maxwell</h2>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>1. Gauss Listrik:</b> <span class="rumus">&nabla; &middot; E = &rho; / &epsilon;<sub>0</sub></span> (Muatan hasilkan medan listrik) <span class="cite"></span>.</li>
+                    <li><b>2. Gauss Magnet:</b> <span class="rumus">&nabla; &middot; B = 0</span> (Kutub magnet selalu ganda/utara-selatan) <span class="cite"></span>.</li>
+                    <li><b>3. Faraday:</b> <span class="rumus">&nabla; &times; E = -(&part;B / &part;t)</span> (Magnet berubah hasilkan medan listrik) <span class="cite"></span>.</li>
+                    <li><b>4. Ampere-Maxwell:</b> <span class="rumus">&nabla; &times; B = &mu;<sub>0</sub>J + ...</span> (Listrik berubah hasilkan medan magnet) <span class="cite"></span>.</li>
+                    <li>Membuktikan cahaya = gelombang elektromagnetik: <span class="rumus">c = 1 / &radic;(&mu;<sub>0</sub>&epsilon;<sub>0</sub>)</span> <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 13 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Peran Fisika Elektro</h2>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Fisika Kuantum & Semikonduktor:</b> Melahirkan transistor (1947) dan Sirkuit Terpadu (IC) <span class="cite"></span>.</li>
+                    <li><b>Fisika Kuantum:</b> Dasar teknologi laser dan sensor optik <span class="cite"></span>.</li>
+                    <li><b>Superkonduktivitas:</b> Arus tanpa hambatan, kunci teknologi MRI dan kereta Maglev <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 14 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Peran Matematika 1</h2>
+                <p>Kalkulus & Aljabar</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Diferensial:</b> Mengukur laju perubahan.<br>Contoh tegangan induktor: <span class="rumus">v(t) = L (di/dt)</span> <span class="cite"></span>.</li>
+                    <li><b>Integral:</b> Mengukur akumulasi.<br>Contoh tegangan kapasitor: <span class="rumus">V<sub>c</sub> = (1/C) &int; I<sub>c</sub> dt</span> <span class="cite"></span>.</li>
+                    <li><b>Aljabar Linear:</b> Pakai Matriks untuk memecahkan persamaan rangkaian Hukum Kirchhoff yang rumit <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 15 -->
+    <div class="card">
+        <div class="inner">
+            <div class="front">
+                <h2>Peran Matematika 2</h2>
+                <p>Transformasi & Statistika</p>
+            </div>
+            <div class="back">
+                <ul>
+                    <li><b>Transformasi Fourier:</b> Analisis sinyal dengan mengubah domain waktu ke domain frekuensi (wajib di telekomunikasi) <span class="cite"></span>.</li>
+                    <li><b>Transformasi Laplace:</b> Analisis sistem kendali & respons dinamis rangkaian <span class="cite"></span>.</li>
+                    <li><b>Statistika:</b> Teori probabilitas krusial untuk pemrosesan sinyal digital ber-noise, Teori Shannon, dan Machine Learning/AI <span class="cite"></span>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
